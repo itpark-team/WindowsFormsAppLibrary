@@ -173,5 +173,32 @@ namespace WindowsFormsAppLibrary
 
             ClearBookFields();
         }
+
+        private void buttonEditBook_Click(object sender, EventArgs e)
+        {
+            int idBook = int.Parse(textBoxBookId.Text);
+
+            Book selectedBook = libraryEntities.Books.First(book => book.Id == idBook);
+
+            string name = textBoxBookName.Text;
+            int price = int.Parse(textBoxBookPrice.Text);
+
+            int selectedIndex = comboBoxBookAuthor.SelectedIndex;
+            List<Author> authors = libraryEntities.Authors.ToList();
+            int idAuthor = authors[selectedIndex].Id;
+
+            selectedBook.Name = name;
+            selectedBook.Price = price;
+            selectedBook.IdAuthor = idAuthor;
+
+            libraryEntities.SaveChanges();
+
+            List<Book> books = libraryEntities.Books.ToList();
+            UpdateDataGridViewBooks(books);
+
+            comboBoxFilteredAuthors.SelectedIndex = 0;
+
+            ClearBookFields();
+        }
     }
 }

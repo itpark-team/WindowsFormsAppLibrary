@@ -49,6 +49,7 @@ namespace WindowsFormsAppLibrary
             this.label6 = new System.Windows.Forms.Label();
             this.buttonDeleteBook = new System.Windows.Forms.Button();
             this.buttonClearFields = new System.Windows.Forms.Button();
+            this.buttonEditBook = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewBooks)).BeginInit();
             this.SuspendLayout();
             // 
@@ -220,19 +221,30 @@ namespace WindowsFormsAppLibrary
             // 
             // buttonClearFields
             // 
-            this.buttonClearFields.Location = new System.Drawing.Point(304, 384);
+            this.buttonClearFields.Location = new System.Drawing.Point(440, 384);
             this.buttonClearFields.Name = "buttonClearFields";
-            this.buttonClearFields.Size = new System.Drawing.Size(152, 23);
+            this.buttonClearFields.Size = new System.Drawing.Size(112, 23);
             this.buttonClearFields.TabIndex = 15;
             this.buttonClearFields.Text = "Очистить поля";
             this.buttonClearFields.UseVisualStyleBackColor = true;
             this.buttonClearFields.Click += new System.EventHandler(this.buttonClearFields_Click);
+            // 
+            // buttonEditBook
+            // 
+            this.buttonEditBook.Location = new System.Drawing.Point(304, 384);
+            this.buttonEditBook.Name = "buttonEditBook";
+            this.buttonEditBook.Size = new System.Drawing.Size(128, 23);
+            this.buttonEditBook.TabIndex = 16;
+            this.buttonEditBook.Text = "Изменить книгу";
+            this.buttonEditBook.UseVisualStyleBackColor = true;
+            this.buttonEditBook.Click += new System.EventHandler(this.buttonEditBook_Click);
             // 
             // FormMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.buttonEditBook);
             this.Controls.Add(this.buttonClearFields);
             this.Controls.Add(this.buttonDeleteBook);
             this.Controls.Add(this.textBoxBookId);
@@ -280,6 +292,7 @@ namespace WindowsFormsAppLibrary
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Button buttonDeleteBook;
         private System.Windows.Forms.Button buttonClearFields;
+        private System.Windows.Forms.Button buttonEditBook;
     }
 }
 
